@@ -28,6 +28,7 @@
               <span
                 class="navbar-text"
                 id="userName"
+                data-testid="user-name"
                 style="color: white; margin-right: 20px"
               ></span>
             </li>
@@ -44,28 +45,28 @@
     <div class="container-main">
       <div class="container">
         <!-- Summary Stats -->
-        <div class="row mb-5" id="statsContainer">
+        <div data-testid="stats-container" class="row mb-5" id="statsContainer">
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="stat-card">
-              <div class="stat-number" id="totalBooks">-</div>
+              <div data-testid="total-books" class="stat-number" id="totalBooks">-</div>
               <div class="stat-label">Total Books</div>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="stat-card">
-              <div class="stat-number" id="availableBooks">-</div>
+              <div data-testid="available-books" class="stat-number" id="availableBooks">-</div>
               <div class="stat-label">Available Books</div>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="stat-card">
-              <div class="stat-number" id="activeMembers">-</div>
+              <div data-testid="active-members" class="stat-number" id="activeMembers">-</div>
               <div class="stat-label">Active Members</div>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="stat-card">
-              <div class="stat-number" id="borrowedBooks">-</div>
+              <div data-testid="borrowed-books" class="stat-number" id="borrowedBooks">-</div>
               <div class="stat-label">Borrowed Books</div>
             </div>
           </div>
@@ -79,7 +80,7 @@
         >
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="stat-card">
-              <div class="stat-number" id="overdueBooks" style="color: #dc3545">
+              <div data-testid="overdue-books" class="stat-number" id="overdueBooks" style="color: #dc3545">
                 -
               </div>
               <div class="stat-label">Overdue Books</div>
@@ -90,6 +91,7 @@
               <div
                 class="stat-number"
                 id="unreturnedBooks"
+                data-testid="unreturned-books"
                 style="color: #fd7e14"
               >
                 -
@@ -100,27 +102,27 @@
         </div>
 
         <!-- Menu -->
-        <div class="row">
+        <div class="row" data-testid="menu-container">
           <div class="col-12 col-sm-6 col-lg-3">
-            <a href="/books" class="menu-button">
+            <a href="/books" class="menu-button" data-testid="menu-books">
               <div class="menu-icon">📖</div>
               <div>Books</div>
             </a>
           </div>
           <div class="col-12 col-sm-6 col-lg-3">
-            <a href="/members" class="menu-button">
+            <a href="/members" class="menu-button" data-testid="menu-members">
               <div class="menu-icon">👥</div>
               <div>Members</div>
             </a>
           </div>
           <div class="col-12 col-sm-6 col-lg-3">
-            <a href="/borrowing" class="menu-button">
+            <a href="/borrowing" class="menu-button" data-testid="menu-borrowing">
               <div class="menu-icon">🏷️</div>
               <div>Borrowing</div>
             </a>
           </div>
           <div class="col-12 col-sm-6 col-lg-3">
-            <a href="/reports" class="menu-button">
+            <a href="/reports" class="menu-button" data-testid="menu-reports">
               <div class="menu-icon">📊</div>
               <div>Reports</div>
             </a>
