@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>0/13</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>0/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -84,45 +84,45 @@
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Borrowing routes
-const express = require("express");
-const router = express.Router();
-const BorrowingController = require("../controllers/BorrowingController");
-const { requireAuth, requireAdmin } = require("../middleware/auth");
+const express = <span class="cstat-no" title="statement not covered" >require("express");</span>
+const router = <span class="cstat-no" title="statement not covered" >express.Router();</span>
+const BorrowingController = <span class="cstat-no" title="statement not covered" >require("../controllers/BorrowingController");</span>
+const { requireAuth, requireAdmin } = <span class="cstat-no" title="statement not covered" >require("../middleware/auth");</span>
 &nbsp;
-router.get("/borrowed", requireAuth, BorrowingController.getBorrowed);
-router.get("/overdue", requireAuth, BorrowingController.getOverdue);
-router.get(
+<span class="cstat-no" title="statement not covered" >router.get("/borrowed", requireAuth, BorrowingController.getBorrowed);</span>
+<span class="cstat-no" title="statement not covered" >router.get("/overdue", requireAuth, BorrowingController.getOverdue);</span>
+<span class="cstat-no" title="statement not covered" >router.get(</span>
   "/member/:memberId",
   requireAuth,
   BorrowingController.getMemberBorrows,
 );
-router.get("/", requireAuth, BorrowingController.getAll);
-router.post("/", requireAuth, BorrowingController.borrow);
-router.get("/:borrowId", requireAuth, BorrowingController.findById);
-router.put("/:borrowId/return", requireAuth, BorrowingController.returnBook);
-router.put("/:borrowId/extend", requireAuth, BorrowingController.extendDueDate);
+<span class="cstat-no" title="statement not covered" >router.get("/", requireAuth, BorrowingController.getAll);</span>
+<span class="cstat-no" title="statement not covered" >router.post("/", requireAuth, BorrowingController.borrow);</span>
+<span class="cstat-no" title="statement not covered" >router.get("/:borrowId", requireAuth, BorrowingController.findById);</span>
+<span class="cstat-no" title="statement not covered" >router.put("/:borrowId/return", requireAuth, BorrowingController.returnBook);</span>
+<span class="cstat-no" title="statement not covered" >router.put("/:borrowId/extend", requireAuth, BorrowingController.extendDueDate);</span>
 &nbsp;
-module.exports = router;
+<span class="cstat-no" title="statement not covered" >module.exports = router;</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -130,7 +130,7 @@ module.exports = router;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-02-13T01:54:11.197Z
+                at 2026-04-05T19:13:00.820Z
             </div>
         <script src="../prettify.js"></script>
         <script>
