@@ -43,11 +43,12 @@
               <span
                 class="navbar-text"
                 id="userName"
+                data-testid="user-name"
                 style="color: white; margin-right: 20px"
               ></span>
             </li>
             <li class="nav-item">
-              <button class="btn btn-light btn-sm" id="logoutBtn">
+              <button class="btn btn-light btn-sm" id="logoutBtn" data-testid="logout-btn">
                 Logout
               </button>
             </li>
@@ -57,13 +58,13 @@
     </nav>
 
     <div class="container mt-4">
-      <h2>📊 Reports</h2>
+      <h2 data-testid="reports-title">📊 Reports</h2>
 
       <!-- Overdue Books Report -->
       <div class="report-card">
         <h5 class="report-title">Overdue Books</h5>
         <div class="table-container">
-          <table class="table table-striped mb-0" id="overdueTable">
+          <table class="table table-striped mb-0" id="overdueTable" data-testid="overdue-table">
             <thead>
               <tr>
                 <th>Member</th>
@@ -73,7 +74,7 @@
                 <th>Fine</th>
               </tr>
             </thead>
-            <tbody id="overdueTableBody">
+            <tbody id="overdueTableBody" data-testid="overdue-table-body">
               <tr>
                 <td colspan="5" class="text-center text-muted">Loading...</td>
               </tr>
@@ -86,7 +87,7 @@
       <div class="report-card">
         <h5 class="report-title">Top Borrowed Books</h5>
         <div class="table-container">
-          <table class="table table-striped mb-0" id="topBooksTable">
+          <table class="table table-striped mb-0" id="topBooksTable" data-testid="top-books-table">
             <thead>
               <tr>
                 <th>Book Title</th>
@@ -94,7 +95,7 @@
                 <th>Times Borrowed</th>
               </tr>
             </thead>
-            <tbody id="topBooksTableBody">
+            <tbody id="topBooksTableBody" data-testid="top-books-table-body">
               <tr>
                 <td colspan="3" class="text-center text-muted">Loading...</td>
               </tr>
@@ -107,7 +108,7 @@
       <div class="report-card">
         <h5 class="report-title">Most Active Members</h5>
         <div class="table-container">
-          <table class="table table-striped mb-0" id="activeMembersTable">
+          <table class="table table-striped mb-0" id="activeMembersTable" data-testid="active-members-table">
             <thead>
               <tr>
                 <th>Member Name</th>
@@ -115,7 +116,7 @@
                 <th>Current Books</th>
               </tr>
             </thead>
-            <tbody id="activeMembersTableBody">
+            <tbody id="activeMembersTableBody" data-testid="active-members-table-body">
               <tr>
                 <td colspan="3" class="text-center text-muted">Loading...</td>
               </tr>

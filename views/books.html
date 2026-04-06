@@ -47,7 +47,7 @@
               ></span>
             </li>
             <li class="nav-item">
-              <button class="btn btn-light btn-sm" id="logoutBtn">
+              <button class="btn btn-light btn-sm" id="logoutBtn" data-testid="logout-btn">
                 Logout
               </button>
             </li>
@@ -56,13 +56,13 @@
       </div>
     </nav>
 
-    <div class="container mt-4">
+    <div class="container mt-4" data-testid="books-page">
       <div class="row mb-4">
         <div class="col">
           <h2>📖 Books Management</h2>
         </div>
         <div class="col text-end">
-          <button class="btn btn-add" id="addBookBtn">+ Add Book</button>
+          <button class="btn btn-add" id="addBookBtn" data-testid="add-book-btn">+ Add Book</button>
         </div>
       </div>
 
@@ -74,13 +74,14 @@
               type="text"
               class="form-control"
               id="searchInput"
+              data-testid="search-input"
               placeholder="Search by title, author, or ISBN..."
               aria-label="Search books"
             />
-            <button class="btn btn-primary" id="searchBtn" type="button">
+            <button class="btn btn-primary" id="searchBtn" data-testid="search-btn" type="button">
               🔍 Search
             </button>
-            <button class="btn btn-secondary" id="clearSearchBtn" type="button">
+            <button class="btn btn-secondary" id="clearSearchBtn" data-testid="clear-search-btn" type="button">
               Clear
             </button>
           </div>
@@ -100,7 +101,7 @@
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody id="booksTableBody">
+          <tbody id="booksTableBody" data-testid="books-table-body">
             <tr>
               <td colspan="7" class="text-center text-muted">Loading...</td>
             </tr>
@@ -113,6 +114,7 @@
     <div
       class="modal fade"
       id="addBookModal"
+      data-testid="add-book-modal"
       tabindex="-1"
       aria-labelledby="addBookModalLabel"
       aria-hidden="true"
@@ -196,6 +198,7 @@
               class="btn btn-primary"
               id="saveBookBtn"
               onclick="saveBook()"
+              data-testid="save-book-btn"
             >
               Save Book
             </button>
@@ -208,6 +211,7 @@
     <div
       class="modal fade"
       id="editBookModal"
+      data-testid="edit-book-modal"
       tabindex="-1"
       aria-labelledby="editBookModalLabel"
       aria-hidden="true"
@@ -301,6 +305,7 @@
               type="button"
               class="btn btn-primary"
               id="saveEditBookBtn"
+              data-testid="update-book-btn"
               onclick="saveEditBook()"
             >
               Update Book
@@ -344,6 +349,7 @@
 
             books.forEach((book) => {
               const row = document.createElement("tr");
+              row.setAttribute("data-testid", "book-row");
               row.innerHTML = `
                 <td>${book.id}</td>
                 <td>${book.title}</td>
@@ -352,8 +358,8 @@
                 <td>${book.total_copies}</td>
                 <td>${book.available_copies}</td>
                 <td>
-                  <button class="btn btn-sm btn-primary" onclick="editBook(${book.id})">Edit</button>
-                  <button class="btn btn-sm btn-danger" onclick="deleteBook(${book.id})">Delete</button>
+                  <button data-testid="edit-book-btn" class="btn btn-sm btn-primary" onclick="editBook(${book.id})">Edit</button>
+                  <button data-testid="delete-book-btn" class="btn btn-sm btn-danger" onclick="deleteBook(${book.id})">Delete</button>
                 </td>
               `;
               tbody.appendChild(row);
